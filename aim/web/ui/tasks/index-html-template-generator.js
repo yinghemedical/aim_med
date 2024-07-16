@@ -5,7 +5,9 @@ const staticFilesKey = '/static-files/';
 const basePathKey = `{{ base_path }}${staticFilesKey}`;
 
 (async () => {
+  
   const HTML = await fs.readFile(`${buildDirectoryPath}index.html`, 'utf8');
+  // console.log(HTML);
   const replacedHTML = HTML.replaceAll(staticFilesKey, basePathKey);
 
   await fs.writeFile(`${buildDirectoryPath}index-template.html`, replacedHTML);

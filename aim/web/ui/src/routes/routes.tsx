@@ -43,6 +43,13 @@ const ImagesExplore = React.lazy(
       /* webpackChunkName: "images" */ 'pages/ImagesExplore/ImagesExplore'
     ),
 );
+const MedicalsExplore = React.lazy(
+  () =>
+    import(
+      /* webpackChunkName: "images" */ 'pages/MedicalImagesExplore/MedicalImagesExplore'
+    ),
+);
+
 const FiguresExplore = React.lazy(
   () => import(/* webpackChunkName: "figures" */ 'pages/FiguresExplorer'),
 );
@@ -130,6 +137,15 @@ const routes = {
     displayName: 'Text',
     isExact: true,
     title: pageTitlesEnum.TEXT_EXPLORER,
+  },
+  MEDICAL_IMAGE_EXPLORE: {
+    path: PathEnum.Medicals_Explore,
+    component: MedicalsExplore,
+    showInSidebar: true,
+    displayName: 'Medical',
+    icon: 'images',
+    isExact: true,
+    title: pageTitlesEnum.IMAGES_EXPLORER,
   },
   IMAGE_EXPLORE: {
     path: PathEnum.Images_Explore,

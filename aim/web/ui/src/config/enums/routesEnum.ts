@@ -12,6 +12,7 @@ enum PathEnum {
   Scatters = '/scatters',
   Scatters_Id = '/scatters/:appId',
   Images_Explore = '/images',
+  Medicals_Explore = '/medical',
   Images_Explore_Id = '/images/:appId',
   Figures_Explorer = '/figures',
   Audios_Explorer = '/audios',

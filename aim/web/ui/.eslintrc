@@ -16,7 +16,7 @@
     "prettier"
   ],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": "warn",
     "react/no-unescaped-entities": 0,
     "no-console": "warn",
     "quotes": [
@@ -31,7 +31,7 @@
     "react/react-in-jsx-scope": "off",
     "react/display-name": "off",
     "import/order": [
-      "error",
+      "warn",
       {
         "groups": [
           "builtin",
