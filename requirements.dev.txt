@@ -1,3 +1,4 @@
 wheel >= 0.31.0
 twine >= 1.11.0
 ruff == 0.3.3
+aimrocks == 0.5.2

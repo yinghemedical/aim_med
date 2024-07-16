@@ -4,6 +4,7 @@ const pageTitles = {
   METRICS_EXPLORER: 'Metrics Explorer',
   PARAMS_EXPLORER: 'Params Explorer',
   IMAGES_EXPLORER: 'Images Explorer',
+  MEDICAL_EXPLORER: 'Medical Images Explorer',
   SCATTERS_EXPLORER: 'Scatters Explorer',
   FIGURES_EXPLORER: 'Figures Explorer',
   AUDIOS_EXPLORER: 'Audios Explorer',
