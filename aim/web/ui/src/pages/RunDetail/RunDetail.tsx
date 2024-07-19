@@ -90,6 +90,7 @@ const tabs: Record<string, string> = {
   system: 'System',
   distributions: 'Distributions',
   images: 'Images',
+  medicalImages: 'Medical Images',
   audios: 'Audios',
   texts: 'Texts',
   figures: 'Figures',
@@ -183,6 +184,14 @@ function RunDetail(): React.FunctionComponentElement<React.ReactNode> {
         runParams={runData?.runParams}
       />
     ),
+    medicalImages: (
+      <TraceVisualizationContainer
+        runHash={runHash}
+        traceType='medicalImages'
+        traceInfo={runData?.runTraces}
+        runParams={runData?.runParams}
+      />
+    ),
     audios: (
       <TraceVisualizationContainer
         runHash={runHash}
@@ -215,7 +224,7 @@ function RunDetail(): React.FunctionComponentElement<React.ReactNode> {
     ),
     notes: <RunDetailNotesTab runHash={runHash} />,
   };
-
+  // console.log(tabContent);
   function getRunsOfExperiment(
     id: string,
     params?: { limit: number; offset?: string },
@@ -269,6 +278,7 @@ function RunDetail(): React.FunctionComponentElement<React.ReactNode> {
   }, [runHash]);
 
   React.useEffect(() => {
+    console.log(pathname);
     redirect();
     analytics.pageView(ANALYTICS_EVENT_KEYS.runDetails.pageView);
     // eslint-disable-next-line react-hooks/exhaustive-deps

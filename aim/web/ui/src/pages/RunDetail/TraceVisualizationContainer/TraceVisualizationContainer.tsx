@@ -29,6 +29,10 @@ const ImagesVisualizer = React.lazy(
   () =>
     import(/* webpackChunkName: "ImagesVisualizer" */ '../ImagesVisualizer'),
 );
+const MedicalImagesVisualizer = React.lazy(
+  () =>
+    import(/* webpackChunkName: "ImagesVisualizer" */ '../MedicalImagesVisualizer'),
+);
 const TextsVisualizer = React.lazy(
   () => import(/* webpackChunkName: "TextsVisualizer" */ '../TextsVisualizer'),
 );
@@ -48,6 +52,7 @@ const traceTypeVisualization = {
   videos: () => null, // @TODO add tracking event keys in analyticsKeysMap object
   texts: TextsVisualizer,
   figures: PlotlyVisualizer,
+  medicalImages:MedicalImagesVisualizer
 };
 
 function TraceVisualizationContainer({
@@ -56,6 +61,7 @@ function TraceVisualizationContainer({
   runHash,
   runParams,
 }: ITraceVisualizationContainerProps) {
+  console.log(traceType)
   const runTracesModelData = useModel(runTracesModel);
   React.useEffect(() => {
     runTracesModel.initialize(

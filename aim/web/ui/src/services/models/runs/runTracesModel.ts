@@ -81,7 +81,6 @@ function initialize(
   runParams?: object,
 ) {
   model.init();
-
   const { data, availableIds, title, defaultActiveKey, defaultActiveName } =
     getMenuData(traceType, traces);
 

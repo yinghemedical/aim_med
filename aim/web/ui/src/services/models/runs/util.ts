@@ -456,6 +456,7 @@ export function processPlotlyData(data: Partial<IPlotlyData>) {
 
 export const VisualizationMenuTitles = {
   images: 'Images',
+  medicalImages: 'medicalImages',
   distributions: 'Distributions',
   audios: 'Audios',
   videos: 'Videos',

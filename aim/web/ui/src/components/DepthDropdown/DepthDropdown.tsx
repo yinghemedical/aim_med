@@ -58,6 +58,7 @@ function DepthDropdown({
             getOptionLabel={(option) => option.label}
             getOptionSelected={(option) => option.depth === depth}
             onChange={(e, value) => {
+              // @ts-ignore
               onDepthChange?.(value.depth, index);
             }}
             disableClearable={true}

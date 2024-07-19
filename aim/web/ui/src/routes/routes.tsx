@@ -46,7 +46,7 @@ const ImagesExplore = React.lazy(
 const MedicalsExplore = React.lazy(
   () =>
     import(
-      /* webpackChunkName: "images" */ 'pages/MedicalImagesExplore/MedicalImagesExplore'
+      /* webpackChunkName: "medicalImages" */ 'pages/MedicalImagesExplore/MedicalImagesExplore'
     ),
 );
 
@@ -145,7 +145,7 @@ const routes = {
     displayName: 'Medical',
     icon: 'images',
     isExact: true,
-    title: pageTitlesEnum.IMAGES_EXPLORER,
+    title: pageTitlesEnum.MEDICAL_EXPLORER,
   },
   IMAGE_EXPLORE: {
     path: PathEnum.Images_Explore,
@@ -232,16 +232,7 @@ const routes = {
     displayName: 'Experiment',
     isExact: false,
     title: pageTitlesEnum.EXPERIMENT,
-  },
-  METRICS_EXPLORER: {
-    path: PathEnum.Metrics_Explorer,
-    component: MetricsExplorer,
-    showInSidebar: false,
-    icon: 'metrics',
-    displayName: 'Metrics_v2',
-    isExact: true,
-    title: pageTitlesEnum.METRICS_EXPLORER_V2,
-  },
+  }
 };
 
 export default routes;

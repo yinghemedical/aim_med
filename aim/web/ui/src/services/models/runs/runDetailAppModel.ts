@@ -74,6 +74,7 @@ function getRunInfo(runHash: string): IApiRequest<void> {
       const data = await getRunsInfoRequestRef.call((detail: any) => {
         exceptionHandler({ detail, model });
       });
+      console.log(data.traces)
       model.setState({
         runParams: data.params,
         runTraces: data.traces,

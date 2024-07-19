@@ -24,7 +24,7 @@ function getBasePath(isApiBasePath: boolean = true): string {
 }
 
 let API_HOST: string = isDEVModeOn
-  ? `http://127.0.0.1:43800${getBasePath()}/api`
+  ? `http://127.0.0.1:43809${getBasePath()}/api`
   : `${getBasePath()}/api`;
 
 function getAPIHost() {

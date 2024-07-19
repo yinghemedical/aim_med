@@ -32,7 +32,9 @@ export type TraceType =
   | 'texts'
   | 'videos'
   | 'figures'
+  | 'medicalImages'
   | 'metric';
+  
 
 /**
  * The context of info Raw data

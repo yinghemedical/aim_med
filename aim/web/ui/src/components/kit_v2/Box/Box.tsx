@@ -72,6 +72,7 @@ const Box = React.forwardRef<typeof StyledBox, IBoxProps>(
           ...layoutProps,
           ...css,
         }}
+        // @ts-ignore
         ref={forwardedRef as React.RefObject<HTMLElement>}
       >
         <Component>{children}</Component>

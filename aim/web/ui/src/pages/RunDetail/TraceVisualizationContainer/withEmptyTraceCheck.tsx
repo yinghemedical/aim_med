@@ -19,7 +19,9 @@ function withEmptyTraceCheck(
   return (
     props: ITraceVisualizationContainerProps,
   ): React.FunctionComponentElement<React.ReactNode> => {
+    console.log(props?.traceInfo);
     const traces = props?.traceInfo ? props?.traceInfo[props.traceType] : null;
+   
     const emptyText = `No tracked ${props.traceType}`;
     if (!traces || !traces.length) {
       return (
